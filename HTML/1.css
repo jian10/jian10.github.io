@@ -1,0 +1,21 @@
+body{
+	background-color: bisque;
+	background-image: url(img/2.jpg);
+	background-size: 100%;
+}
+#l{text-align: center;}
+h1{
+	text-align: center;
+	color: darkmagenta;
+}
+a{text-align: center;}
+.he{
+	
+	width:19%;
+    margin:0 auto;
+    padding:5px;
+    color:cornflowerblue;
+    float:left;    
+}
+body p{text-indent: 2em;
+	color: white;}
