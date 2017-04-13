@@ -1,0 +1,23 @@
+body{
+	color:burlywood;
+	padding: 0;
+	margin: 10px auto;
+}
+#lay{
+	border: 1px solid deepskyblue;
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+aside{
+	width: 150px;
+	border: 1px solid deepskyblue;
+	min-height: 500px;
+	color:blueviolet;
+	float:left;
+}
+main{
+	border: 1px solid deepskyblue;
+	min-height: 500px;
+	color:blueviolet;}
+
