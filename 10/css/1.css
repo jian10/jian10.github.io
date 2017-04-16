@@ -9,6 +9,9 @@ body{
 	margin: 0 auto;
 	text-align: center;
 }
+section{
+	border: 1px solid deepskyblue;
+}
 aside{
 	width: 150px;
 	border: 1px solid deepskyblue;
@@ -17,7 +20,32 @@ aside{
 	float:left;
 }
 main{
-	border: 1px solid deepskyblue;
+	border: 1px solid deepskyblue; 
 	min-height: 500px;
 	color:blueviolet;}
-
+ul{
+	display: inline;
+	margin-left: auto;
+	margin-right: auto;
+}
+li{
+	display: block;
+}
+.san li{
+	margin: 0;	
+	border: 1px solid deepskyblue;
+	width: 19%;
+	float: left;
+}
+li a:link{
+	color: black;
+}
+li a:visited{
+	color: mediumturquoise;
+}
+li a:hover{
+	color: moccasin;
+}
+li a:active{
+	color: slateblue;
+}
