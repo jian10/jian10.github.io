@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>表单</title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+				}
+			body{
+				background-color: bisque;
+			}
+			.a1{
+				width: 500px;
+				height: 255px;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				background-color: darkturquoise;
+				text-align: center;
+			}
+			.a1 input:not([type="submit"]){
+				width: 75%;
+				height: 2em;
+				margin: 10px 0;
+				text-indent: 1em;
+				border: 2px dashed salmon;
+				
+			}
+			.a1 input:not([type="submit"]):focus{
+				border: 2px solid saddlebrown;
+				box-shadow: inset 0 0 6px 1px black;
+			}
+			.a1 input[type="submit"]{
+				width: 40%;
+				height: 40px;
+				margin: 10px 0;
+			}
+			.a1 input[type="submit"]:hover{
+				color: white;
+				height: 40px;
+				background-color: slategray;
+				font-size: 1.2em;
+				
+			}
+				
+		</style>
+	</head>
+	<body>
+		<h1>庆哥，我那个“登陆”的hover 颜色覆盖有空隙，这是为什么，请你指点一下！！！！！</h1>
+		<form action="" method="post" class="a1">
+			<h3>个人信息</h3>
+			<input type="text" name="a2" id="a2" value="" placeholder="请输入你的姓名"/>
+			<input type="text" name="a3" id="a3" value="" placeholder="请输入你的年龄"/>
+			<input type="text" name="a4" id="a4" value="" placeholder="请输入你的邮箱"/>
+			<input type="submit" value="登陆" />
+		</form>
+	</body>
+</html>
