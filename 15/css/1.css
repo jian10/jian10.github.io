@@ -1,0 +1,46 @@
+body{
+	max-width: 1200px;
+	margin: 20px auto;
+	color: white;
+	background: url(../img/pexels-photo-27571.jpg) fixed;
+	background-size: 100%;
+}
+header{
+	position: relative;
+}
+img{
+	width: 80px;
+	height: auto;
+	
+}
+.a{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+ul{
+	list-style-type: none;
+}
+ul li{
+	display: inline-block;
+	padding: 20px;
+	border: 1px solid rgba(255,255,255,0);
+
+	transform:border .5s;
+}
+ul li a{
+	color: white;
+	text-decoration: none;
+	transform: color .5s;
+}
+ul li:hover{
+	border: 1px solid rgba(255,255,255,1);
+	
+}
+ul li:hover a{
+	color: #000000;
+}
+h2{
+	text-align: center;
+}
+
