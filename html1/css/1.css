@@ -1,0 +1,125 @@
+body{
+	width: 1200px;
+	max-height:5000px ;
+	margin: 10px auto;
+	color: white;
+	background: url(../img/1.jpg) fixed no-repeat;
+	background-size: 100%;
+}
+header{
+	position: relative;
+}
+a img{
+	height: 5em;
+	width: auto;
+}
+.t1 ul{
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 0;
+	list-style-type: none;
+}
+ul li{
+	padding: 0.8em 1.75em;
+	margin: 1.2em 0.25em;
+	display: inline-block;
+	transform: border .5s;
+}
+ul li:hover{
+
+	border: 1px solid #EEEEEE;
+	
+}
+ul li a{
+	text-decoration: none;
+	color: white;
+	
+}
+ul li:hover a{
+	color: coral;
+}
+h2{
+	margin: 35px 0 10px;
+}
+p{
+	text-indent: 2em;
+	margin: 20px 0;
+}
+.t{
+	position: relative;
+	margin: 0;
+}
+.t2{
+	padding-bottom: 60px;
+}
+.t2 ul{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+}
+.t2 ul li{
+	background-color: rgba(100,200,100,.5);
+	border-radius:6px ;
+	transform: background-color .5s,border-radius .5s;
+}
+.t2 ul li:hover{
+	border-radius:0 ;
+	background-color: rgba(100,200,100,.8);
+	cursor: pointer;
+}
+
+.t3{
+	margin: 0;
+}
+
+figure{
+	float: left;
+	width: 25%;
+	overflow: hidden;
+	margin: 0 12.5% 20px 0px;
+	position: relative;
+
+}
+.a,.b{
+	margin-right: 0;
+}
+figure figcaption{
+	position: absolute;
+	width: 300px;
+	height: 240px;
+	line-height: 240px;
+	
+	background-color: rgba(0,0,0,.5);
+	text-align: center;
+	transform: background-color .5s;
+}
+figure figcaption p{
+	opacity: 0;
+	transform: opacity .5s;
+}
+figure figcaption:hover p{
+	opacity: 1;
+}
+figure figcaption:hover{
+	background-color: rgba(0,0,0,.1);
+	cursor: pointer;
+}
+figure img{	
+	width: 100%;
+}
+label{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color:white ;
+	color: black;
+}
+label:nth-child(2n){
+	width: 150px;
+	background-color: black;
+	color: white;
+	margin-right: 20px;
+}
