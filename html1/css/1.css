@@ -108,18 +108,63 @@ figure figcaption:hover{
 figure img{	
 	width: 100%;
 }
-label{
-	display: inline-block;
-	width: 60px;
-	height: 30px;
-	line-height: 30px;
-	text-align: center;
-	background-color:white ;
-	color: black;
+.t4 dl{
+	display: block;
+	
+	margin: 0;
 }
-label:nth-child(2n){
-	width: 150px;
+.t4 dt{
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0 5px 20px 0;
+	background-color: white;
+	color: #000000;
+	border-radius: 6px;
+}
+.t4 dd{
+	display: inline-block;
+	padding: 5px 30px;
 	background-color: black;
 	color: white;
-	margin-right: 20px;
+	border-radius:6px ;
+	margin: 0 20px 20px 0;
+}
+input{
+	width: 25%;
+	padding: 10px 5px;
+	margin: 0 10px 20px 0;
+	border-radius:6px ;
+}
+select{
+	width: 30%;
+	padding: 10px 5px;
+	border-radius:6px ;
+}
+frame{
+	position: relative;
+}
+textarea{
+	width: 30%;
+	height: 100px;
+	border-radius:6px ;
+}
+input[type="submit"]{
+	position: absolute;
+	width: 15%;
+	margin: 0 20px ;
+}
+footer p{
+	text-align: center;
+}
+.h1{
+	
+	display: inline-block;
+	border: 1px solid white;
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+	margin: 0 20px 20px 0;
+	position: fixed;
+	bottom: 0;
+	right: 0;
 }
