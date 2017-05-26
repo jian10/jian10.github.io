@@ -96,5 +96,23 @@
 			<a href="#f4"class="h1">顶部</a>
 			<p>© 版权归王海庆所有</p>
 		</footer>
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('header a, .rightNav a').on('click', function(e) {
+					e.preventDefault();
+					$('html, body').animate({
+						scrollTop: $($(this).attr('href')).offset().top
+					}, 500);
+
+				});
+				$('#goTop').on('click', function(e) {
+					e.preventDefault();
+					$('html, body').animate({
+						scrollTop: 0
+					}, 500);
+				});
+			});
+		</script>
 	</body>
 </html>
