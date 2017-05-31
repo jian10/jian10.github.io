@@ -1,0 +1,164 @@
+body{
+	font-family: "微软雅黑";
+	min-height: 1500px;
+}
+a{
+	text-decoration: none;
+	font-size: 1.3em;
+	
+}
+
+/********************************************/
+header{
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0);
+}
+header.on{
+	background-color: rgba(0,0,0,.5);
+}
+header .toubu .tubiao{
+	position: absolute;
+	left:6%;
+}
+header .toubu .caidan1{
+	position: absolute;
+	right: 6%;
+}
+header .toubu img{
+	height: 80px;
+	line-height: 80px;
+}
+header .toubu span{
+	position: absolute;
+	font-size:3em;
+	font-family:  'Dancing Script', cursive;
+}
+header ul{
+	margin: 0;
+	padding: 0;
+	height: 80px;
+	line-height: 80px;
+	width: auto;
+}
+header ul li{
+	display: inline-block;
+	height: 80px;
+
+	padding:0 0 0 60px ;
+	cursor: pointer;
+}
+header a{
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	color: white;
+	
+}
+header a:hover{
+	color: #339BEB;
+}
+/**************************************************************/
+/****************************************************************/
+section div{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.shouye{
+
+	min-height: 600px;
+	background: url(../img/2.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.shouye div{
+	position: absolute;
+	top:35%;
+	left: 25%;
+	bottom: 35%;
+	right: 25%;
+}
+.shouye h2{
+	color: white;
+	text-align: center;
+}
+.shouye h2 strong{
+	color: #339BEB;
+}
+.shouye p{
+	color: white;
+	
+	margin: 30px 0;
+}
+.shouye p a{
+	font-size: 1em;
+	display:inline-block;
+	padding: 5px ;
+	background-color: rgba(0,0,0,.1);
+	color: #000000;
+}
+/*******************************************************/
+/*********************************************************/
+.guanyu{
+	
+	min-height: 600px;
+}
+.guanyu div{
+	padding: 10% 0;
+}
+.guanyu h2,
+.guanyu p{
+	text-align: center;
+}
+.guanyu tr th{
+	width: 48%;
+	overflow: hidden;
+}
+.guanyu tr th img{
+	width: 100%;
+}
+.liebiao{
+	cursor: pointer;
+}
+.liebiao td::before {
+	
+  	margin: 0;
+  	padding: 0;
+  	display: inline-block;
+  	content: "$";
+   	border: 1px dashed black;
+    border-radius: 100%;
+    margin-right: .5em;
+    
+}
+.liebiao td:hover::before{
+	margin-left: .5em;
+	margin-right: 0;
+}
+/********************************************************/
+/***********************************************************/
+.fuwu{
+	min-height: 600px;
+	background: url(../img/3.jpg) no-repeat center center;
+	background-size: cover;
+}
+/******************************************************/
+/********************************************************/
+.anli{
+	min-height: 600px;
+}
+/**********************************************************/
+/*************************************************************/
+.lianxi{
+	min-height: 600px;
+	background: url(../img/1.jpg) no-repeat center center;
+	background-size: cover;
+}
+/*************************************************************/
+/********************************************************/
+footer p{
+	display: block;
+	margin: 10px;
+	text-align: center;
+}
