@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			
+			#shizhong{
+				width: 400px;
+				height: 400px;
+				background: url(img/clock.jpg) no-repeat;
+				background-size: 100%;
+				text-align: center;
+				margin:100px auto;
+				position: relative
+			}
+			#miao{
+				width: 2px;
+				height: 120px;
+				background: red;
+				position: absolute;
+				top: 80px;
+				left: 200px;
+				transform-origin: bottom;
+				
+			}
+			#feng{
+				width: 4px;
+				height: 100px;
+				background: black;
+				position: absolute;
+				top: 100px;
+				left: 200px;
+				transform-origin: bottom;
+			}
+			#shi{
+				width: 6px;
+				height: 80px;
+				background: black;
+				position: absolute;
+				top: 120px;
+				left: 200px;
+				transform-origin: bottom;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="shizhong">	
+			<div id="shi"></div>
+			<div id="feng"></div>
+			<div id="miao"></div>
+		</div>
+		
+		<script type="text/javascript">
+			
+			var oB=document.getElementById("beijing");
+			var oMiao=document.getElementById("miao");
+			var oFeng=document.getElementById("feng");
+			var oShi=document.getElementById("shi");
+			function getTime () {
+				var oTime=new Date();
+				oMiao.style.transform="rotate("+oTime.getSeconds()*6+"deg)";
+				oFeng.style.transform="rotate("+(oTime.getSeconds()/60+oTime.getMinutes())*6+"deg)";
+				oShi.style.transform="rotate("+((oTime.getSeconds()/3600)+(oTime.getMinutes()/60)+oTime.getHours())*30+"deg)";
+
+			}
+			getTime();
+			//间隔1000ms，执行getTime函数
+		var a=setInterval(getTime,1000);
+		</script>
+	</body>
+</html>
