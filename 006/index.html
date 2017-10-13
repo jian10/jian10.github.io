@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: pink;
+				text-align: center;
+				
+			}
+			
+			#h2{
+				margin: 100px auto 50px auto;
+				text-align: center;
+				font-size: 5em;
+				background-color: pink;
+				border: 0;
+				outline:none;
+			}
+			
+		</style>
+	</head>
+	<body>
+			
+			<input type="text" name="h2" id="h2" value=""  />
+			<h1 id="H1">中华人民共和国万岁!</h1>
+		<script type="text/javascript">
+			var oH1=document.getElementById("H1");
+			var arry1=oH1.innerText;
+			var i=0;
+			oH1.innerHTML="";
+			function xianshi(){
+				
+				if(i<arry1.length)
+					oH1.innerText+=arry1[i];
+				else{
+					i=-1;
+					oH1.innerHTML="";
+				}
+					
+				i++;
+			}
+			setInterval(xianshi,100);			
+					
+			var str="H,e,l,l,o, ,W,o,r,l,d,!"
+			var arry2=str.split(",");
+			var j=0;
+			var oH2=document.getElementById("h2");
+			var oTime=1000;			
+			oH2.focus();
+			setInterval("if(j<arry2.length) oH2.value+=arry2[j++]",oTime);
+		
+		</script>
+	</body>
+</html>
