@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		body{
+			min-height: 6000px;
+			margin: 0;
+		}
+		#b{
+			width: 300px;
+			height: 300px;
+			background-color: blue;
+			position: absolute;
+			overflow: hidden;
+			
+		}
+		#c{
+			width: 100%;
+			
+		}
+			#a{
+				width: 100px;
+				height: 100px;
+				border: 1px red solid;
+				border-radius: 100%;
+				
+				position: absolute;
+				margin-top: -50px;
+				margin-left: -50px;
+				
+				pointer-events: none;
+			}
+			#zhi{
+				position: fixed;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="b">
+			<img src="img/timg.jpg" id="c"/>
+			<div id="a"></div>
+		</div>
+		
+		<!--<input type="text" name="zhi" id="zhi" value="" />-->
+		<script type="text/javascript">
+			var oA=document.getElementById("a");
+			var oB=document.getElementById("b");
+			var oZhi=document.getElementById("zhi");
+			var oC=document.getElementById("c");
+			var f;
+			oC.addEventListener("load",function(){
+				f=oC.naturalWidth/oC.width;
+				oA.style.backgroundImage="url("+oC.src+")";
+			});
+//			var rect=obj.getBoundingClientRect();
+			oB.addEventListener("mousemove",function  () {
+				var x=event.offsetX;
+				var y=event.offsetY;
+				oA.style.left=x+"px";
+				oA.style.top=y+"px";
+				
+				oA.style.backgroundPosition=(-f*x+50)+"px "+(-f*y+50)+"px";
+//				console.log(event.offsetX,event.offsetY);
+//				oZhi.value="("+event.offsetX+","+event.offsetY+")";
+//				console.log(event.pageX,event.pageY);
+//				oZhi.value="("+event.pageX+","+event.pageY+")";
+//				console.log(event.screenX,event.screenY);
+//				oZhi.value="("+event.screenX+","+event.screenY+")";
+//				console.log(event.clientX,event.clientY);
+//				oZhi.value="("+event.clientX+","+event.clientY+")";
+			});
+			
+		</script>
+	</body>
+</html>
