@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			
+			#hua{width: 300px;
+				height: 400px;
+				position: relative;				
+				overflow: hidden;
+				margin: 0 50px 50px 50px ;
+							
+			}
+			#fangda{
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+				border-radius: 100%;
+				position:fixed;
+				pointer-events: none;
+				transform: translate(-50%,-50%);
+				display: none;
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+			<!--<img src="img/timg.jpg" alt="" id="hua" />
+			<img src="img/timg.jpg" alt="" id="hua" />
+			<img src="img/timg.jpg" alt="" id="hua" />
+			<img src="img/timg.jpg" alt="" id="hua" />
+			<img src="img/timg.jpg" alt="" id="hua" />
+			<img src="img/timg.jpg" alt="" id="hua" />	
+			<img src="img/timg.jpg" alt="" id="hua" />
+			<img src="img/timg.jpg" alt="" id="hua" />-->
+			<div id="fangda"></div>
+		<script type="text/javascript">
+			var oHua=document.getElementById("hua");
+			var oFangda=document.getElementById("fangda");
+			var oImg=document.querySelectorAll("img");
+			var bili=[];
+			if(oImg.length>=1){
+				for (i=0;i<oImg.length;i++) {
+					oImg[i].addEventListener("load",(function(n){
+						return 	function(){
+							    	bili[n]=oImg[n].naturalWidth/oImg[n].width;
+							    	oFangda.style.backgroundImage="url("+oImg[n].src+")";
+								  	console.log(bili[n]);
+								}
+					}(i)));
+					oImg[i].addEventListener("mouseout",(function(){
+							oFangda.style.display="none";								
+					}));
+					oImg[i].addEventListener("mousemove",(function(m){
+						
+						return  function(){	
+									oFangda.style.display="block";
+									var x1=event.clientX,x2=event.offsetX;
+									var y1=event.clientY,y2=event.offsetY;
+									oFangda.style.left=x1+"px";
+									oFangda.style.top=y1+"px";
+									oFangda.style.backgroundPosition=(-x2*bili[m]+50)+"px "+(-y2*bili[m]+50)+"px";
+							    }
+					}(i)));					
+				}	
+			}
+		</script>
+		
+	</body>
+</html>
