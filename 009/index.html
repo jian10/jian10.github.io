@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>菜单（展开/收起）</title>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<style type="text/css">
+			body{
+				margin: 0;
+			}
+			#caidan{
+				
+				width: 100%;
+				height: 60px;
+				background-color: deepskyblue;
+			}
+			#tubiao{
+				font-size: 50px;
+				width: auto;
+				color: white;
+				margin: 5px 0  0 15px;
+				cursor: pointer;
+			}
+			#cebian{
+			
+				width: 300px;
+				height: 600px;
+				background-color: powderblue;
+				display: none;
+			}
+			h3{
+				color: rgba(0,0,0,.6);
+				margin: 0;
+				padding: 0;
+			}
+			#son {
+				list-style-type: none;
+				display: none;
+			}
+			#father{
+				padding: 0;
+				margin: -1px 0 0 15px;
+				list-style-type: none;	
+				cursor: pointer;	
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="caidan">
+			<div id="tubiao"><i class="fa fa-bars"></i>菜单</div>
+		</div>
+		<div id="cebian">
+			<ul id="father">
+				<li>
+					<h3>大菜单1</h3>
+					<ul id="son">
+						<li>小菜单1</li>
+						<li>小菜单2</li>
+						<li>小菜单3</li>
+					</ul>
+				</li>
+				<li>
+					<h3>大菜单2</h3>
+					<ul id="son">
+						<li>小菜单1</li>
+						<li>小菜单2</li>
+						<li>小菜单3</li>
+					</ul>
+				</li>
+				<li>
+					<h3>大菜单3</h3>
+					<ul id="son">
+						<li>小菜单1</li>
+						<li>小菜单2</li>
+						<li>小菜单3</li>
+					</ul>
+				</li>
+				<li>
+					<h3>大菜单4</h3>
+					<ul id="son">
+						<li>小菜单1</li>
+						<li>小菜单2</li>
+						<li>小菜单3</li>
+					</ul>
+				</li>
+				<li>
+					<h3>大菜单5</h3>
+					<ul id="son">
+						<li>小菜单1</li>
+						<li>小菜单2</li>
+						<li>小菜单3</li>
+					</ul>
+				</li>
+				<li>
+					<h3>大菜单6</h3>
+					<ul id="son">
+						<li>小菜单1</li>
+						<li>小菜单2</li>
+						<li>小菜单3</li>
+					</ul>
+				</li>
+			</ul>
+			
+		</div>
+		<script type="text/javascript">
+			var otubiao=document.getElementById("tubiao");
+			var ocebian=document.getElementById("cebian");
+			var ofather=document.querySelectorAll("h3");
+			var oson=document.querySelectorAll("#son");
+			var oi=document.getElementsByClassName("fa");
+			otubiao.addEventListener("click",function  () {
+				
+				if(ocebian.style.display=="block"){
+					ocebian.style.display="none";
+					oi[0].style.transform="rotate(0deg)";
+				}
+				else{
+					ocebian.style.display="block";
+					oi[0].style.transform="rotate(90deg)";
+				}
+			});
+			for (i=0;i<ofather.length;i++) {
+				ofather[i].addEventListener("click",(function(n){
+					return function(){						
+						if(oson[n].style.display=="block"){
+							oson[n].style.display="none";							
+						}
+						else{
+							oson[n].style.display="block";							
+						}						
+					}											
+				})(i));
+			}
+
+		</script>
+	</body>
+</html>
