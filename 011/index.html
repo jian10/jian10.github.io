@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#a{
+				width: 100%;
+				text-align: center;
+				margin-top: 100px;
+				
+			}
+			a{	
+				margin: 100px;
+				text-decoration: none;
+				font-size: 3em;
+				display: inline-block;
+				position: relative;
+			}
+			span{
+				width: 70px;
+				text-align: center;
+				padding: 10px 30px;
+				position: absolute;		
+				color: white;
+				background-color: black;	
+				display: none;
+			}
+			a span::after{
+				content: "";
+				width: 0;
+				height: 0;
+				position: absolute;
+			}
+			.b[data-fangxiang = "上"] span{
+				bottom: 65px;
+				left: -40px;
+			}			
+			.b[data-fangxiang = "上"] span::after {
+				left: 42px;
+				bottom: -40px;				
+				border: 20px solid #000;
+				border-color: gold transparent transparent; 
+			}
+			.b[data-fangxiang = "下"] span{
+				top: 80px;
+				left: -40px;
+			}			
+			.b[data-fangxiang = "下"] span::after {
+				left: 42px;
+				top: -40px;				
+				border: 20px solid #000;
+				border-color: transparent transparent gold; 
+			}
+			.b[data-fangxiang = "右"] span{
+				bottom: -15px;
+				left: -142px;
+			}			
+			.b[data-fangxiang = "右"] span::after {
+				left: 130px;
+				bottom: 25px;				
+				border: 20px solid #000;
+				border-color: transparent transparent transparent gold; 
+			}
+			.b[data-fangxiang = "左"] span{
+				bottom: -20px;
+				right: -142px;
+			}			
+			.b[data-fangxiang = "左"] span::after {
+				right: 130px;
+				bottom: 25px;				
+				border: 20px solid #000;
+				border-color: transparent gold transparent transparent; 
+			}
+			a:hover span{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="a">
+			<a href="#" class="b" data-fangxiang = "上" >上</a><span></span>
+			<a href="#" class="b" data-fangxiang = "右" >右</a>
+			<a href="#" class="b" data-fangxiang = "下" >下</a>
+			<a href="#" class="b" data-fangxiang = "左" >左</a>
+		</div>
+		<script type="text/javascript">
+			(function(){
+				var litp=document.querySelectorAll(".b");
+				for(var i=0;i<litp.length;i++)
+				{
+					var content=document.createElement("span");
+					content.innerHTML=litp[i].getAttribute('data-fangxiang');
+					litp[i].appendChild(content);
+				}
+				
+			})();
+			
+		</script>
+	</body>
+</html>
